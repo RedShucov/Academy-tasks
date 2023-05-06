@@ -15,14 +15,14 @@
 // Сложность:
 // Лёгкая.
 
+/**
+ * Функция, высчитывает из «грязной» зарплаты налоги возвращает «чистую» зарплату.
+ * @param {number} grossSalary - зарплата до вычета налогов.
+ * @returns {number} зарплата после вычета налогов.
+ */
 const getSalaryWithoutTax = function (grossSalary) {
   const taxPercent = (grossSalary >= 100000) ? 0.45 : 0.35;
   const tax = grossSalary * taxPercent;
   const netSalary = grossSalary - tax;
   return netSalary;
 }
-
-console.log(getSalaryWithoutTax(100000))
-
-
-

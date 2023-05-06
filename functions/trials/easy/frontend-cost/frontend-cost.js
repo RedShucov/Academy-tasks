@@ -17,15 +17,15 @@
 // Лёгкая.
 
 /**
- * Функция,
+ * Функция, определяет, какой проект выгодней: срочный или обычный.
  * @param {number} timeHours - время в часах выполнения.
- * @param {boolean} urgency - срочность выполнения.
- * @returns {number} - стоимость выполнения.
+ * @param {boolean} isQuick - срочность выполнения.
+ * @returns {number} - стоимость выполнения проекта.
  */
-const getPrice = function (timeHours, urgency) {
+const getProjectCost = function (timeHours, isQuick) {
   let ratePerHour = 1500;
 
-  if (urgency) {
+  if (isQuick) {
     timeHours /= 2;
     ratePerHour *= 2.5;
   }
