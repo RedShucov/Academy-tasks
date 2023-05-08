@@ -21,8 +21,8 @@
  * @returns {number} зарплата после вычета налогов.
  */
 const getSalaryWithoutTax = function (grossSalary) {
-  const taxPercent = (grossSalary >= 100000) ? 0.45 : 0.35;
-  const tax = grossSalary * taxPercent;
-  const netSalary = grossSalary - tax;
+  const taxRate = (grossSalary >= 100000 ? 0.45 : 0.35)
+  const taxAmount = Math.round(grossSalary * taxRate);
+  const netSalary = grossSalary - taxAmount;
   return netSalary;
 }
