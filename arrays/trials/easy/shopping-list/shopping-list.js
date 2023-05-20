@@ -21,7 +21,7 @@ const groceries = ['чай', 'шпроты', 'печенье', 'сахар', 'ч
  * @param {Array} array - список покупок в виде массива.
  * @returns {string} - список покупок в виде строки.
  */
-function getShoppingString(array) {
+const getShoppingString = (array) => {
   let shoppingList = '';
 
   for (let i = 0; i < array.length; i++) {
