@@ -4,17 +4,22 @@
 
 // Входные данные:
 // Исходный массив - luggage{Array}
-// Стартовый индекс - startIndex{number}
-// Количесвто элементов - quantity{number}
 
 // Выходные данные:
-// Количество цифр в числе - chosenLuggage{Array}
+// Новый массив - chosenLuggage{Array}
 
 // Сложность:
 // Средняя.
 
 const luggage = ['пакет', 'мяч', 'тапки', 'когтеточка', 'коробка', 'миска', 'мята'];
 
+/**
+ * Функция, принимает на вход массив и на основание его формирует новый массив.
+ * @param {Array} array - Исходный массив.
+ * @param {number} startIndex - Стартовый индекс для добавления элементов в новый массив.
+ * @param {number} quantity - Количесвто элементов нового массива.
+ * @returns {Array} Новый массив на основание исходного массива.
+ */
 const getNewArray = (array, startIndex, quantity) => {
   const newArray = [];
   const lastIndex = startIndex + quantity;
